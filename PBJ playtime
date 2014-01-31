@@ -25,6 +25,8 @@ if bread<1 or peanut_butter<1:
 		print "Bread"
 	if peanut_butter<1:
 		print "Peanut butter"
+	if jelly<1:
+		print "Jelly"
 elif peanut_butter>1 and bread>=2 and jelly<1:
 	print "You need more jelly; you can make a peanut butter sandwich, but you really need to pull yourself together."
 elif sandwiches>1 and open_faced<=0:
