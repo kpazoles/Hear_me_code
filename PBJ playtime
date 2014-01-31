@@ -1,0 +1,46 @@
+bread=input("How many slices of bread do you have? ")
+peanut_butter=input("How many sandwiches worth of peanut butter do you have? ")
+jelly=input("How many sandwiches worth of jelly do you have? ")
+
+
+
+
+#task 5
+
+if (peanut_butter>=1 and peanut_butter>(bread/2)) and (jelly>=1 and jelly>(bread/2)):
+	sandwiches=(bread/2)
+elif (peanut_butter<=(bread/2)) and peanut_butter<jelly:
+	sandwiches=peanut_butter
+elif (jelly<=(bread/2)) and jelly<peanut_butter:
+	sandwiches=jelly
+
+if (bread%2>0) and sandwiches+(bread%2)<peanut_butter and sandwiches+(bread%2)<jelly:
+	open_faced=bread%2
+elif (bread%2>0) and sandwiches+(bread%2)>=peanut_butter and peanut_butter<jelly:
+	open_faced=peanut_butter-sandwiches
+elif (bread%2>0) and sandwiches+(bread%2)>=jelly and jelly<peanut_butter:
+	open_faced=jelly-sandwiches
+
+
+if bread<1 or peanut_butter<1:
+	print "No lunch for you today! You need to go shopping and buy:"
+	if bread<1:
+		print "Bread"
+	if peanut_butter<1:
+		print "Peanut butter"
+elif peanut_butter>1 and bread>=2 and jelly<1:
+	print "You need more jelly; you can make a peanut butter sandwich, but you really need to pull yourself together."
+elif sandwiches>1 and open_faced<=0:
+	print "You can make {0} PBJ sandwiches!".format(sandwiches)
+elif sandwiches>1 and open_faced>1:
+	print "You can make {0} PBJ sandwiches and {1} open-faced PBJ sandwiches!".format(sandwiches,open_faced)
+elif sandwiches>1 and open_faced==1:
+	print "You can make {0} PBJ sandwiches and 1 open-faced PBJ sandwich.".format(sandwiches)
+elif sandwiches<1 and open_faced==1:
+	print "You can make 1 open-faced PBJ sandwich."
+elif sandwiches==1 and open_faced==1:
+	print "You can make 1 PBJ sandwich and 1 open-faced PBJ sandwich."
+else:
+	print "No lunch for you today...womp womp"
+
+
