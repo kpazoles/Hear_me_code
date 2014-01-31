@@ -3,13 +3,13 @@ peanut_butter=input("How many sandwiches worth of peanut butter do you have? ")
 jelly=input("How many sandwiches worth of jelly do you have? ")
 
 
-
-if (peanut_butter>=1 and peanut_butter>(bread/2)) and (jelly>=1 and jelly>(bread/2)):
+if (peanut_butter>=1 and peanut_butter>=(bread/2)) and (jelly>=1 and jelly>=(bread/2)):
 	sandwiches=(bread/2)
 elif (peanut_butter<=(bread/2)) and peanut_butter<jelly:
 	sandwiches=peanut_butter
 elif (jelly<=(bread/2)) and jelly<peanut_butter:
 	sandwiches=jelly
+
 
 if (bread%2>0) and sandwiches+(bread%2)<peanut_butter and sandwiches+(bread%2)<jelly:
 	open_faced=bread%2
@@ -17,10 +17,12 @@ elif (bread%2>0) and sandwiches+(bread%2)>=peanut_butter and peanut_butter<jelly
 	open_faced=peanut_butter-sandwiches
 elif (bread%2>0) and sandwiches+(bread%2)>=jelly and jelly<peanut_butter:
 	open_faced=jelly-sandwiches
+else: 
+	open_faced=0
 
 
 if bread<1 or peanut_butter<1:
-	print "No lunch for you today! You need to go shopping and buy:"
+	print "You need to go shopping and buy:"
 	if bread<1:
 		print "Bread"
 	if peanut_butter<1:
@@ -39,6 +41,8 @@ elif sandwiches<1 and open_faced==1:
 	print "You can make 1 open-faced PBJ sandwich."
 elif sandwiches==1 and open_faced==1:
 	print "You can make 1 PBJ sandwich and 1 open-faced PBJ sandwich."
+elif sandwiches==1 and open_faced==0:
+	print "You can make 1 PBJ sandwich."
 else:
 	print "No lunch for you today...womp womp"
 
