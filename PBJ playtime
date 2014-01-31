@@ -4,9 +4,6 @@ jelly=input("How many sandwiches worth of jelly do you have? ")
 
 
 
-
-#task 5
-
 if (peanut_butter>=1 and peanut_butter>(bread/2)) and (jelly>=1 and jelly>(bread/2)):
 	sandwiches=(bread/2)
 elif (peanut_butter<=(bread/2)) and peanut_butter<jelly:
