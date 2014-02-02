@@ -11,6 +11,7 @@ SE_addresses=[]
 entry=raw_input("Do you have an address to enter? Y/N ")
 entry=entry.lower()
 entry=entry.strip()
+entry=entry[0]
 
 while entry == 'y':
 
@@ -32,6 +33,7 @@ while entry == 'y':
 	entry=raw_input("Do you have more addresses to enter? Y/N ")
 	entry=entry.lower()
 	entry=entry.strip()
+	entry=entry[0]
 
 
 print "NW addresses:", len(NW_addresses), NW_addresses
