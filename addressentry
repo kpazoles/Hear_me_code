@@ -28,6 +28,7 @@ while entry == 'y':
 		SE_addresses.append(address)
 	else: 
 		print "Your address is incomplete"
+		continue
 	entry=raw_input("Do you have more addresses to enter? Y/N ")
 	entry=entry.lower()
 	entry=entry.strip()
