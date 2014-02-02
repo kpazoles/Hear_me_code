@@ -10,6 +10,7 @@ SE_addresses=[]
 
 entry=raw_input("Do you have an address to enter? Y/N ")
 entry=entry.lower()
+entry=entry.strip()
 
 while entry == 'y':
 
@@ -29,6 +30,7 @@ while entry == 'y':
 		print "Your address is incomplete"
 	entry=raw_input("Do you have more addresses to enter? Y/N ")
 	entry=entry.lower()
+	entry=entry.strip()
 
 
 print "NW addresses:", len(NW_addresses), NW_addresses
