@@ -1,0 +1,37 @@
+#creates empty lists for each quadrant
+
+NW_addresses=[]
+NE_addresses=[]
+SW_addresses=[]
+SE_addresses=[]
+
+#I wanted to make this like a data inputting program, allowing you to enter as many addresses as you needed to enter, so I used a while loop.
+#I'm using the .lower function to make sure variations in entry don't affect the way the input is treated - not sure if this is more efficient than simply using an or statement.
+
+entry=raw_input("Do you have an address to enter? Y/N ")
+entry=entry.lower()
+
+while entry == 'y':
+
+	address=raw_input("Enter your address: ")
+	address=address.lower()
+	address_list=address.split(" ")
+
+	if 'nw' in address_list:
+		NW_addresses.append(address)
+	elif 'ne' in address_list:
+		NE_addresses.append(address)
+	elif 'sw' in address_list:
+		SW_addresses.append(address)
+	elif 'se' in address_list:
+		SE_addresses.append(address)
+	else: 
+		print "Your address is incomplete"
+	entry=raw_input("Do you have more addresses to enter? Y/N ")
+	entry=entry.lower()
+
+
+print "NW addresses:", len(NW_addresses), NW_addresses
+print "NE addresses:", len(NE_addresses), NE_addresses
+print "SW addresses:", len(SW_addresses), SW_addresses
+print "SE addresses:", len(SE_addresses), SE_addresses
