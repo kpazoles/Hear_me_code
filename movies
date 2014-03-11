@@ -1,0 +1,16 @@
+header=("Movie, Parental Rating, Bechdel Rating, IMDB Rating, Genre")
+movie_titles=["Inception", "When Harry met Sally", "Big Fish", "Charlie Wilson's War", "Ferris Bueller's Day Off"]
+movie_ratings=["PG-13","R", "PG-13", "R", "PG-13"]
+bechdel_ratings=[3,3,1,3,2]
+imdb_ratings=[8.8,7.6,8.0,7.1,7.9]
+genre=["Action/Adventure/Mystery", "Comedy/Romance", "Adventure/Fantasy", "Biography/Comedy/Drama", "Comedy/Drama"]
+
+# This prints the header, which is just a comma separated string
+print header
+
+# This prints the movies by first zipping each n'th item in the lists together into a list of lists, and then looping through the new, zipped list and printing a string formatted to include the 1st, 2nd, 3rd, 4th, 5th item in each new zipped list.
+
+for title, rating, brating, irating, genre in zip(movie_titles, movie_ratings, bechdel_ratings, imdb_ratings, genre):
+	print "{0},{1},{2},{3},{4}".format(title, rating, brating, irating, genre)
+
+# Copy and save the output to a csv file, open in excel.
