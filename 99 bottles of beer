@@ -1,0 +1,11 @@
+bottles=99
+
+for bottle in range(98):
+	print "{0} bottles of beer on the wall, {0} bottles of beer".format(bottles)
+	if bottles-1>1:
+		print "If one of those bottles should happen to fall, {0} bottles of beer on the wall".format(bottles-1)
+	elif bottles-1==1:
+		print "If one of those bottles should happen to fall, {0} bottle of beer on the wall".format(bottles-1)
+	bottles=bottles-1
+print "1 bottle of beer on the wall, 1 bottle of beer."
+print "If that bottle should happen to fall, no more bottles of beer on the wall."
