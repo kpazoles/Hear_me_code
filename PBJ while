@@ -1,0 +1,22 @@
+bread=input("How many slices of bread do you have? ")
+peanut_butter=input("How many sandwiches worth of peanut butter do you have? ")
+jelly=input("How many sandwiches worth of jelly do you have? ")
+
+sandwich=0
+
+while (bread/2>0 and peanut_butter>=1 and jelly>=1):
+	print "I am making sandwich #{0}.".format(sandwich+1)
+	bread=bread-2
+	peanut_butter=peanut_butter-1
+	jelly=jelly-1
+	sandwich=sandwich+1
+	if bread>=2 and peanut_butter>0 and jelly>0:
+		print "I have enough bread for {0} more sandwiches, enough peanut butter for {1} more sandwiches, and enough jelly for {2} more.".format(bread/2, peanut_butter, jelly)
+	
+
+if bread==1 or bread==0:
+	print "All done; I ran out of bread."
+elif peanut_butter==0:
+	print "All done; I ran out of peanut butter."
+elif jelly==0:
+	print "All done; I ran out of jelly."
