@@ -1,0 +1,29 @@
+#opens the file with the state information
+
+with open("state_info.csv", "r") as info_file:
+	info=info_file.read().splitlines()
+
+	for index,line in enumerate(info):
+		info[index]=line.split(",")
+	
+
+#gets rid of headers	
+	info.pop(0)
+	
+#creates a string for the html code
+	html=""
+	
+	for state in info:
+		html+= "<table border='1'><tr><td colspan='2'>{0}</td></tr>".format(state[1])
+		html+= "<tr><td>Rank: {0}</td>".format(state[0])
+		html+="<td>Percent: {0}</td></tr>".format(state[4])
+		html+= "<tr><td>US House Members: {0}</td><td>Population: {1}</td>".format(state[3],state[2])
+		html+="</tr></table>\n"
+
+print html
+#creates a file for the html
+
+	with open("state_info.html","w") as html_file:
+		html_file.write(html)
+
+	print "New file created."
