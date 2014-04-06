@@ -1,0 +1,27 @@
+#opens the txt file with the state names 
+
+with open('states.txt','r') as states_file:
+	states=states_file.read().splitlines()
+
+
+#removes the tab and makes each state a list with 
+#abbreviation as one string and the state name as another string
+	for index,state in enumerate(states):
+		states[index]=state.split("	")
+
+	
+#creates a string of the html drop down menu for states
+#so it can be saved to a file
+
+html=("<select name='States'>\n")
+
+for state in states:
+		html+=("\t <option value='{0}'>{1}</option>\n".format(state[0], state[1]))
+
+html+=("</select>")
+
+print html
+
+#creating a file to store the list
+with open('states.html','w') as newfile:
+	newfile.write(html)
