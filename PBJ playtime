@@ -1,3 +1,16 @@
+# Peanut Butter Jelly Time!
+
+# First Goal: Create a program that can tell you whether or not you can make a peanut butter and jelly sandwich
+
+# Second Goal: Modify that program to tell you: if you can make a sandwich, how many you can make
+
+# Third Goal: Modify that program to allow you to make open-face sandwiches if you have an odd number of slices of bread ( )
+
+# Fourth Goal: Modify that program to tell you: if you're missing ingredients, which ones you need to be able to make your sandwiches
+
+# Fifth Goal: Modify that program to tell you: if you have enough bread and peanut butter but no jelly, that you can make a peanut butter sandwich but you should take a hard, honest look at your life.  Wow, your program is kinda judgy.
+
+
 bread=input("How many slices of bread do you have? ")
 peanut_butter=input("How many sandwiches worth of peanut butter do you have? ")
 jelly=input("How many sandwiches worth of jelly do you have? ")
