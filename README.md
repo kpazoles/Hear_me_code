@@ -1,8 +1,7 @@
-Hear Me Code
-===========
+#Hear Me Code
 
-This is a repo for code written for the playtime exercizes in the Hear Me Code class.
------
+###This is a repo for code written for the playtime exercizes for Shannon's [Hear Me Code](http://hearmecode.com/ "Hear Me Code") class.
+
 
 <ul>
 <li>Lesson 1 - PBJ</li>
