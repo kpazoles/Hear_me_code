@@ -1,6 +1,6 @@
 #Hear Me Code
 
-###This is a repo for code written for the playtime exercizes for Shannon's [Hear Me Code](http://hearmecode.com/ "Hear Me Code") class.
+###This repo includes code I wrote to solve the playtime exercises for Shannon's [Hear Me Code](http://hearmecode.com/ "Hear Me Code") class.
 
 
 <ul>
